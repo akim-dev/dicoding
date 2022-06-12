@@ -346,7 +346,159 @@ div#opacity {
 
 
 
+/* 
+*******************BAKCKGROUND COLOR********************
+CSS memperlakukan setiap elemen HTML seperti berada pada sebuah kotak (kita akan mempelajari ini pada pembahasan box model). Properti background-color dapat mengatur warna latar belakang dari kotak tersebut
 
+
+
+
+
+
+
+**********************BOX MODEL***************************
+Pada pembahasan background-color disinggung bahwa setiap elemen ditampilkan seperti sebuah boxes atau kotak. Box model merupakan salah satu konsep dari CSS. Setiap elemen yang dibuat pada HTML akan menciptakan sebuah kotak untuk menampung kontennya.  Layaknya bentuk kotak pada umumnya, pasti terdapat nilai seperti width (lebar), height (tinggi), padding (tebal lapisan), border (garis tepi), dan juga jarak. Pada CSS nilai - nilai tersebut dapat kita atur.
+
+
+Content : Merupakan sebuah inti dari kotak elemen yang merupakan konten dari elemen itu sendiri
+Padding : Area yang menjadi jarak antara border elemen dengan konten yang ditampilkan. Ketika kita menerapkan background-color maka warna tersebut diterapkan pada area padding. Penerapan ukuran padding pada elemen merupakan opsional.
+Border : Merupakan garis terluar yang mengelilingi konten dan padding. Penerapan border pada elemen merupakan opsional.
+Margin : Berbeda dengan padding, margin merupakan area jarak diluar dari border. Pada ilustrasi diatas, margin ditunjukkan dengan warna merah muda namun pada aslinya margin selalu transparan dan penerapan margin pada elemen merupakan opsional.
+Edge of element : merupakan batas dari suatu elemen. Di dalamnya terdapat margin, border, padding dan konten. Pada ilustrasi di atas, batas elemen ditunjukkan dengan garis putus tetapi pada aslinya batas elemen selalu tidak terlihat.
+
+
+Box Dimensions
+Secara standar sebuah box yang dihasilkan tiap elemen selalu cukup untuk menampung konten. Tetapi kita dapat mengatur nilai dimensi dari box tersebut dengan properti width dan height.
+
+Limiting Dimension
+Beberapa website yang ada sekarang menampilkan layout yang dapat melebar dan menyempit mengikuti ukuran layar pengguna. Pada prinsip tampilan tersebut mungkin kita memerlukan sebuah limitasi ukuran yang harus ditampilkan agar konten selalu dapat ditampilkan secara proporsional. Untuk melakukannya kita manfaatkan properti min-width dan max-width.
+min-width : merupakan properti yang digunakan untuk menetapkan nilai lebar minimal yang harus dimiliki elemen.
+max-width : merupakan properti yang digunakan untuk menetapkan nilai lebar maksimal yang harus dimiliki elemen.
+
+
+Overflowing Content
+visible : Merupakan nilai default pada properti ini. Konten yang tidak tertampung (overflow) akan tetap ditampilkan seperti pada standarnya.
+hidden : Jika terjadi overflow, maka konten yang tidak tertampung akan disembunyikan.
+scroll : Memunculkan scroll bar pada pinggir elemen, sehingga konten yang tidak tertampung akan ditampilkan dengan scroll bar. Jika menggunakan nilai ini, scroll bar akan tetap muncul walaupun konten tidak terjadi overflow.
+auto : Sama seperti scroll, bedanya jika tidak terjadi overflow, maka nilai visible yang akan diterapkan.
+
+
+Box-sizing
+Pada CSS2 ukuran lebar dan panjang elemen mengacu pada konten elemen (content-box). Itu berarti ukuran elemen seluruhnya merupakan nilai panjang dan lebar yang kita spesifikasikan ditambah dengan nilai padding dan border yang diterapkan pada elemen. Hal tersebut membuat sebagian developer menjadi sulit menetapkan ukuran dimensi.
+
+Border
+Border merupakan sebuah garis yang mengelilingi area konten dan padding (opsional). Kita bisa mengatur tipe, ketebalan, serta warna garis yang ditampilkan sesuai dengan yang kita inginkan. Kita juga bisa mengatur dalam menampilkan sebagian atau keseluruhan garis pada elemen. Mari kita eksplorasi apa saja properties yang dapat mengatur border.
+
+
+Border Width
+Properti border-width digunakan untuk mengatur ketebalan dari border. Nilai dari properti ini dapat berupa pixel atau menggunakan predefined names value seperti thin, medium, dan thick. Kita tidak bisa menggunakan nilai persentase (%) pada properti ini.
+.box {
+  border-width: 2px 1px 1px 2px; ****top right bottom left*****
+}
+
+Border Style
+Kita bisa menetapkan tipe border dengan menggunakan properti border-style
+
+Border Color
+Properti terakhir adalah border-color. Properti ini digunakan untuk menentukan warna pada garis dengan menggunakan nilai RGB, Hex, atau nama warna pada CSS
+
+
+Shorthand
+Untuk menerapkan border pada elemen kita harus mendefinisikan seluruh properti border yang ada. Dimulai dari menetapkan ketebalan (border-width), tipe (border-style), dan warna (border-color). Jika kita lupa menetapkan salah satu properti tersebut, maka garis tidak akan nampak pada elemen.
+
+
+
+
+
+************************************************************************
+**************************PADDING**************************************
+***********************************************************************
+Padding
+Padding merupakan jarak antara area konten dan border. Padding banyak diterapkan pada elemen jika elemen tersebut menerapkan warna latar atau pun border. Padding memberikan sedikit ruang sehingga konten di dalam elemen dapat lebih nyaman untuk ditampilkan
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 10px;
+padding-left: 15px;
+
+padding: 10px 15px 10px 15px;
+
+
+************************************************************************
+**************************MARGIN***********************************
+***********************************************************************
+Seperti halnya padding, margin merupakan ruang atau jarak pada sebuah elemen. Namun jarak tersebut terletak di luar dari konten dan border elemen. Margin digunakan untuk menjaga elemen agar tidak bertabrakan satu sama lain atau dari tepi jendela browser.
+
+margin-top: 10px;
+margin-right: 15px;
+margin-bottom: 20px;
+margin-left: 25px;
+
+margin: 10px 15px 20px 25px
+
+margin: 10px 15px; ****** top dan bottom bernilai 10px, left dan right bernilai 15px ******
+
+
+
+************************************************************************
+**************************DISPLAY ROLE*********************************
+***********************************************************************
+
+
+inline element:
+Elemen HTML yang secara default tidak menambahkan baris baru ketika dibuat.
+Nilai lebar dan tinggi elemen inline sebesar konten di dalamnya, dan tidak dapat diubah.
+Margin dan padding hanya mempengaruhi elemen secara horizontal, tidak vertikal.
+
+block element:
+Elemen HTML secara default menambahkan baris baru ketika dibuat.
+Jika tidak diatur lebarnya, lebar dari elemen block akan memenuhi lebar dari browser atau elemen yang menaunginya.
+Kita dapat mengatur dimensi dari elemen block.
+Di dalam elemen block, kita dapat menyimpan tag elemen HTML lainnya
+
+
+Dengan menggunakan properti display, kita dapat mengubah sebuah elemen inline menjadi block, begitupun sebaliknya. Dalam hal ini, properti ini juga dapat digunakan untuk menyembunyikan elemen yang ditampilkan.
+
+Nilai dari properti ini dapat berupa:
+
+inline : digunakan untuk mengubah elemen block berperilaku seperti elemen inline.
+block : digunakan untuk mengubah elemen inline berperilaku seperti elemen block.
+inline-block : membuat elemen block tidak menambahkan baris baru ketika dibuat, namun tetap mempertahankan sifat lain dari elemen block.
+none : digunakan untuk menyembunyikan elemen dari halaman.
+
+
+************************************************************************
+**************************bOX SHADOW*********************************
+***********************************************************************
+Pada materi formatting text kita sudah belajar cara menambahkan drop shadow pada teks. Pada CSS3 kita juga dapat menambahkan drop shadow di sekitar kotak elemen (tidak termasuk margin) dengan menggunakan properti box-shadow.
+
+
+box-shadow: 6px 6px 5px 10px #666666;
+Nilai pertama : menunjukkan seberapa jauh ke kiri atau kanan (horizontal) bayangan harus ditampakkan.
+Nilai kedua : menunjukkan jarak ke atas atau ke bawah (vertical) bayangan harus ditampakkan. 
+Nilai Ketiga (opsional) : menentukan tingkat keburaman yang harus diterapkan pada bayangan.
+Nilai Keempat (opsional) : menentukan tingkat sebaran (spread) bayangan. Semakin besar nilai yang ditentukan, bayangan yang nampak pun semakin luas.
+Nilai Kelima : menentukan warna yang digunakan pada bayangan.
+
+
+
+
+
+************************************************************************
+**************************ROUNDED CORNER*********************************
+***********************************************************************
+CSS3 memperkenalkan kemampuan untuk membuat rounded corner atau sudut bundar pada box dengan menggunakan properti border-radius. Nilai dari properti ini merupakan tingkat lengkungan border dalam pixel.
+.rounded {
+   border-radius: 10px;
+}
+rounded {
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 5px;
+   border-top-left-radius: 10px;
+}
+.rounded {
+   border-radius: 10px 5px 10px 5px;
+}
 
 
 
@@ -358,3 +510,20 @@ div#opacity {
 
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
