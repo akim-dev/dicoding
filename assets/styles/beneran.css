@@ -93,7 +93,6 @@ selector basic terdiri dari :
     *[lang^=en] {
         font-style: italic;
     }
-
 */
 
 /* Font styling
@@ -194,5 +193,116 @@ p{
   font :1em sans-serif
 }
 
+
+*/
+
+/* 
+
+***************Line Height**********************
+Properti line-height digunakan untuk mengatur jarak minimal dari garis dasar ke garis dasar dalam menampilkannya teks pada halaman. Jika kita terbiasa dengan software document editor (rich text) seperti Microsoft Word, properti ini mirip dengan fungsi line and paragraph spacing.
+
+p {
+   line-height: 2;
+}
+p {
+   line-height: 200%;
+}
+p {
+   line-height: 2em;
+}
+
+
+
+***************Text Indent**********************
+Dalam membuat sebuah dokumen tidak jarang kita membutuhkan jarak/lekuk di awal paragraf. Hal tersebut dapat dilakukan pada website dengan menerapkan properti text-indent.  Kita dapat menentukan nilai properti ini melalui perhitungan panjang dalam px, em, dan in atau bisa menggunakan nilai persentase (%). Nilai persentase dihitung berdasarkan lebar dari induk elemen. Berikut merupakan contoh penggunaannya:
+p#first {
+   text-indent: 2em;
+}
+ 
+p#second {
+   text-indent: 25%;
+}
+ 
+p#third {
+   text-indent: -35px;
+}
+
+
+***************Text Align**********************
+Kita bisa mengatur text alignment (perataan teks) pada website seperti kita melakukannya pada aplikasi Microsoft Word dengan menggunakan properti text-align. Untuk asalnya, properti ini bernilai left atau biasa kita sebut rata kiri. Namun jika kita ingin mengubah perataan teks ini berada di posisi lainnya, maka kita dapat mengubah value-nya menjadi value yang sesuai dengan keinginan kita.
+
+Berikut ini nilai yang dapat digunakan pada properti text-align:
+text-align: left
+Membuat perataan teks pada ujung kiri
+
+text-align: right
+Membuat perataan teks pada ujung kanan
+
+text-align: center
+Membuat perataan teks secara menengah
+
+text-align: justify
+Membuat perataan teks yang setara pada ujung kiri dan kanannya
+
+
+
+
+***************Text Decoration**********************
+Properti ini paling populer digunakan ketika kita ingin membuat garis bawah atau underline pada teks. Tapi tak hanya itu, ada beberapa nilai lain yang dapat kita gunakan untuk properti ini. Detailnya sebagai berikut:
+text-decoration: underline
+Memberikan garis bawah (underline) pada teks
+
+text-decoration: overline
+Memberikan garis atas (overline) pada teks
+
+text-decoration: line-through
+Memberikan efek tulisan dicoret (strikethrough)
+
+text-decoration: none
+Menghilangkan dekorasi teks yang ada pada elemen
+
+***************Text Transform**********************
+Pasti kita pernah mencoba fitur pada document editor yang dapat mengubah kapitalisasi pada teks, bukan? Fitur ini sangat membantu di kala kita ingin mengubah kapitalisasi tanpa harus menuliskan kembali teksnya. Pada CSS juga terdapat fitur serupa, yaitu dengan menggunakan properti text-transform. Ketika kita menerapkan properti text-transform pada elemen teks, maka kapitalisasi akan berubah ketika halaman di-render tanpa harus mengubahnya pada dokumen HTML. 
+
+Properti ini dapat berisikan nilai sebagai berikut:
+text-transform: none
+Teks yang ditampilkan sama seperti yang dituliskan
+
+text-transform: capitalize
+Membuat huruf pertama besar pada tiap katanya
+
+text-transform: lowercase
+Membuat seluruh teks menggunakan huruf kecil
+
+Text-transform: uppercase
+Membuat seluruh teks menggunakan huruf besar
+
+
+
+***************Text Transform**********************
+roperti selanjutnya yang bisa kita gunakan untuk formating teks adalah letter-spacing dan word-spacing. Seperti namanya, properti ini digunakan untuk mengatur spasi atau jarak pada teks. Properti letter-spacing digunakan untuk mengatur jarak antar huruf, sedangkan word-spacing digunakan untuk mengatur jarak antar kata. Berikut contohnya:
+
+p#letter {
+   letter-spacing: 4px;
+}
+p#word {
+   word-spacing: 1.5em;
+}
+
+***************Text shadow**********************
+Memberikan bayangan pada teks telah menjadi hal yang umum digunakan meskipun tidak memiliki dukungan di semua browser. Pada CSS untuk membuat bayangan pada teks (atau biasa disebut drop shadow) kita dapat gunakan properti text-shadow.
+
+Nilai dari properti ini cukup rumit karena membutuhkan tiga buah nilai dan satu buah nilai warna sehingga membutuhkan empat nilai dalam satu properti untuk menentukan bayangannya.
+
+Nilai pertama : menunjukkan seberapa jauh ke kiri atau kanan (horizontal) bayangan harus ditampakkan.
+Nilai kedua : menunjukkan jarak ke atas atau ke bawah (vertical) bayangan harus ditampakkan. 
+Nilai Ketiga (opsional) : menentukan tingkat keburaman yang harus diterapkan pada bayangan.
+Nilai Keempat :  menentukan warna yang digunakan pada bayangan.
+
+p#one {
+   text-shadow: 1px 1px 0px #000000;
+   background-color: #eeeeee;
+   color: #666666;
+}
 
 */
