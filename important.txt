@@ -1,0 +1,9 @@
+https://www.cssmatic.com/box-shadow.
+
+https://jigsaw.w3.org/css-validator/
+https://codebeautify.org/cssvalidate
+http://csslint.net/
+
+ https://cssnano.co/playground/
+https://cssminifier.com/
+https://www.minifier.org/
