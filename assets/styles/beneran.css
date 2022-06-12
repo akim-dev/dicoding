@@ -14,3 +14,185 @@ footer {
   color: white;
   background-color: #00a2c6;
 }
+
+/* 
+selector basic terdiri dari :
+*Type Selector
+*Class Selector
+*ID Selector
+*Attribute Selector
+*Universal Selector
+
+
+1. ******************semua elemen span********** 
+<style>
+      span {
+        color: red;
+    }
+  </style>
+
+2. *****************class selector**************
+<style>
+       .red {
+           color: red;
+       }
+ 
+       .skyblue-bg {
+           background-color: skyblue;
+       }
+ 
+       .fancy {
+           font-weight: bold;
+           text-shadow: 4px 4px 3px #77f;
+       }
+   </style>
+
+   3.***************ID selector*****************
+       <style>
+      #special {
+          background-color: skyblue;
+      }
+      </style>
+
+  4.***************Attribute Selector************
+    <style>
+        <a> element yang menerapkan href attribut 
+            a[href] {
+              color: blue;
+          }
+
+      <a> element yang menerapkan nilai pada href dengan awalan "#" 
+          a[href^="#"] {
+        background-color: gold;
+          }
+
+      <a> element yang menerapkan nilai pada href yang mengandung teks "example" 
+          a[href*="example"] {
+              background-color: silver;
+          }
+      <a> element yang menerapkan nilai pada href yang mengandung teks "insensitive"    tidak mementingkan huruf kapital
+        a[href*="insensitive" i] {
+        color: cyan;
+         }
+
+      <a> element yang menerapkan nilai pada href dengan akhiran ".org" 
+          a[href$=".org"] {
+              color: red;
+          }
+    </style>
+
+
+    4. *****************Universal Selector *****************************
+
+    Menargetkan seluruh tipe elemen 
+       * {
+        color: green;
+    }
+    
+    Menargetkan seluruh tipe elemen yang mengandung nilai "en" pada atribut lang 
+    *[lang^=en] {
+        font-style: italic;
+    }
+
+*/
+
+/* Font styling
+font-family : Menetapkan jenis font yang akan diterapkan pada target.
+font-size : Menentukan ukuran pada teks.
+font-weight : Menentukan ketebalan pada teks. 
+font-style : Menetapkan styling yang diterapkan pada teks.
+font-variant : Menentukan teks untuk menggunakan gaya small caps (huruf kapital kecil).
+font : Shorthand dari properti font yang ada.
+
+
+*****************font-family**********
+**************************************
+**************************************
+body {
+   font-family: sans-serif;
+}
+
+**********font-size*******************
+h1 {
+   font-size: 1.5em;
+}
+
+
+<<<<<<<<<Relativw Unit( Satuan RELATIVE)>>>>>>>>>>>>>>>>>
+em
+relative to>>>>>>>>>Font size
+
+Satuan relatif terhadap ukuran font yang sedang digunakan pada elemen (contohnya, 2em berarti 2 kali lebih besar dari ukuran font seharusnya).
+
+ex
+relative to >>>>>>Font height
+Satuan relatif terhadap tinggi font saat ini, satuan ini sangat jarang sekali digunakan
+
+rem
+relative to>>>>>>>..Font size
+
+Mirip seperti em, tetapi rem merupakan satuan relatif terhadap ukuran font dari root element.
+
+ch
+relative to>>>>>>>>>>Font width
+Satuan relatif terhadap lebar dari karakter “0” nol.
+
+vw
+relative to>>>>>>>>>>>Viewport width
+
+Satuan relatif terhadap 1% lebar viewport. Contoh 1vw = 1% dari lebar viewport. Satuan ini tidak didukung pada browser IE8 ke bawah.
+
+vh
+relative to>>>>>>>>>>Viewport height
+Satuan relatif terhadap 1% tinggi viewport. Contoh 1vh = 1% dari tinggi viewport. Satuan ini tidak didukung pada browser IE8 ke bawah.
+
+
+<<<<<<<<<<<<<<<aBSOLUTE UNIT (SATUAN ABSOLUTE)
+body {
+   font-size: 16px;
+}
+h1 {
+   font-size: 150%; >>>>>> 150% dari 16 = 24px 
+  }
+
+
+px  >>>>>>>>>>Menetapkan nilai font berdasarkan ukuran pixel
+pt>>>>>>>>>>Menetapkan nilai font berdasarkan points (1/72 inch di CSS2.1)
+pc>>>>>>>>>>>Menetapkan nilai font berdasarkan picas (1 pica = 12 point)
+mm>>>>>>>>>>>Menetapkan nilai font berdasarkan millimeters
+cm >>>>>>>>>>Menetapkan nilai font berdasarkan centimeters
+in>>>>>>>>>>>>Menetapkan nilai font berdasarkan inches
+
+
+************FONT-WEIGHT***************
+**************************************
+**************************************
+numeric values (100 sampai 900) atau dengan menggunakan descriptive terms (normal, bold, bolder, dan lighter). 
+
+************FONT-STYLE***************
+**************************************
+**************************************
+(normal) atau miring (italic dan oblique)
+
+
+************FONT-VARIANT***************
+**************************************
+**************************************
+Kita yang terbiasa dengan aplikasi document editor (rich text) seperti Microsoft Word, tentu tahu atau sudah mencoba fitur small caps. Fitur ini dapat membuat teks menjadi kapital tetapi dituliskan secara kecil dan merapat, seperti ini:
+
+
+************SHORT HAND***************
+**************************************
+**************************************
+
+target{
+  font:style weight variant size font-family
+}
+
+contoh 
+p{
+  font :1em sans-serif
+}
+
+
+*/
