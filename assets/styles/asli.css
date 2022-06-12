@@ -1,0 +1,46 @@
+/* meng import google font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+  color: #00a2c6;
+}
+h3 {
+  color: #00a2c6;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #00a2c6;
+}
+
+/* membuat ukuran font menjadi 18px pada tesk yang berada dalam elemen <a> dengan ketebalan huruf 400 dan tidak ada garis bawahnya */
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* membuat egek tebak pada navigasi */
+
+nav a:hover {
+  font-weight: bold;
+}
+
+/*  Selanjutnya teks pada header aside akan kita buat menjadi rata tengah dengan menggunakan properti text-align*/
+
+.profile header {
+  text-align: center;
+}
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #00a2c6;
+  text-align: center;
+  font-weight: bold;
+}

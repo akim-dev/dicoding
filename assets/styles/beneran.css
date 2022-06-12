@@ -1,5 +1,10 @@
+
+
+/* meng import google font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
 body {
-  font-family: sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 h2 {
@@ -304,5 +309,52 @@ p#one {
    background-color: #eeeeee;
    color: #666666;
 }
+
+*/
+
+
+
+/* 
+
+
+***************Menetapkan Nilai Warna*******************
+********************************************************
+********************************************************
+
+
+<<<<<<<<<<<<Numeric Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Warna hijau menggunakan format RGB 
+color: rgb(78,231,23);
+ 
+Warna hijau Menggunakan format HEX 
+color: #4ee717;
+ 
+Warna hijau menggunakan format HSL (hanya di CSS3)
+color: hsl(104, 82%, 50%);
+                              
+<<<<<<<<<<<<<<<<<Predefined Color Name>>>>>>>>>>>>>>>>>>>>
+color: black;
+color: white;
+color: blue;
+
+<<<<<<<<<<<<<<<<<Opactiy >>>>>>>>>>>>>>>>>>>>
+div#opacity {
+   background-color: red;
+   opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 */
