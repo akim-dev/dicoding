@@ -1,0 +1,535 @@
+
+
+/* meng import google font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+  color: #00a2c6;
+}
+h3 {
+  color: #00a2c6;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #00a2c6;
+}
+
+/* 
+selector basic terdiri dari :
+*Type Selector
+*Class Selector
+*ID Selector
+*Attribute Selector
+*Universal Selector
+
+
+1. ******************semua elemen span********** 
+<style>
+      span {
+        color: red;
+    }
+  </style>
+
+2. *****************class selector**************
+<style>
+       .red {
+           color: red;
+       }
+ 
+       .skyblue-bg {
+           background-color: skyblue;
+       }
+ 
+       .fancy {
+           font-weight: bold;
+           text-shadow: 4px 4px 3px #77f;
+       }
+   </style>
+
+   3.***************ID selector*****************
+       <style>
+      #special {
+          background-color: skyblue;
+      }
+      </style>
+
+  4.***************Attribute Selector************
+    <style>
+        <a> element yang menerapkan href attribut 
+            a[href] {
+              color: blue;
+          }
+
+      <a> element yang menerapkan nilai pada href dengan awalan "#" 
+          a[href^="#"] {
+        background-color: gold;
+          }
+
+      <a> element yang menerapkan nilai pada href yang mengandung teks "example" 
+          a[href*="example"] {
+              background-color: silver;
+          }
+      <a> element yang menerapkan nilai pada href yang mengandung teks "insensitive"    tidak mementingkan huruf kapital
+        a[href*="insensitive" i] {
+        color: cyan;
+         }
+
+      <a> element yang menerapkan nilai pada href dengan akhiran ".org" 
+          a[href$=".org"] {
+              color: red;
+          }
+    </style>
+
+
+    4. *****************Universal Selector *****************************
+
+    Menargetkan seluruh tipe elemen 
+       * {
+        color: green;
+    }
+    
+    Menargetkan seluruh tipe elemen yang mengandung nilai "en" pada atribut lang 
+    *[lang^=en] {
+        font-style: italic;
+    }
+*/
+
+/* Font styling
+font-family : Menetapkan jenis font yang akan diterapkan pada target.
+font-size : Menentukan ukuran pada teks.
+font-weight : Menentukan ketebalan pada teks. 
+font-style : Menetapkan styling yang diterapkan pada teks.
+font-variant : Menentukan teks untuk menggunakan gaya small caps (huruf kapital kecil).
+font : Shorthand dari properti font yang ada.
+
+
+*****************font-family**********
+**************************************
+**************************************
+body {
+   font-family: sans-serif;
+}
+
+**********font-size*******************
+h1 {
+   font-size: 1.5em;
+}
+
+
+<<<<<<<<<Relativw Unit( Satuan RELATIVE)>>>>>>>>>>>>>>>>>
+em
+relative to>>>>>>>>>Font size
+
+Satuan relatif terhadap ukuran font yang sedang digunakan pada elemen (contohnya, 2em berarti 2 kali lebih besar dari ukuran font seharusnya).
+
+ex
+relative to >>>>>>Font height
+Satuan relatif terhadap tinggi font saat ini, satuan ini sangat jarang sekali digunakan
+
+rem
+relative to>>>>>>>..Font size
+
+Mirip seperti em, tetapi rem merupakan satuan relatif terhadap ukuran font dari root element.
+
+ch
+relative to>>>>>>>>>>Font width
+Satuan relatif terhadap lebar dari karakter “0” nol.
+
+vw
+relative to>>>>>>>>>>>Viewport width
+
+Satuan relatif terhadap 1% lebar viewport. Contoh 1vw = 1% dari lebar viewport. Satuan ini tidak didukung pada browser IE8 ke bawah.
+
+vh
+relative to>>>>>>>>>>Viewport height
+Satuan relatif terhadap 1% tinggi viewport. Contoh 1vh = 1% dari tinggi viewport. Satuan ini tidak didukung pada browser IE8 ke bawah.
+
+
+<<<<<<<<<<<<<<<aBSOLUTE UNIT (SATUAN ABSOLUTE)
+body {
+   font-size: 16px;
+}
+h1 {
+   font-size: 150%; >>>>>> 150% dari 16 = 24px 
+  }
+
+
+px  >>>>>>>>>>Menetapkan nilai font berdasarkan ukuran pixel
+pt>>>>>>>>>>Menetapkan nilai font berdasarkan points (1/72 inch di CSS2.1)
+pc>>>>>>>>>>>Menetapkan nilai font berdasarkan picas (1 pica = 12 point)
+mm>>>>>>>>>>>Menetapkan nilai font berdasarkan millimeters
+cm >>>>>>>>>>Menetapkan nilai font berdasarkan centimeters
+in>>>>>>>>>>>>Menetapkan nilai font berdasarkan inches
+
+
+************FONT-WEIGHT***************
+**************************************
+**************************************
+numeric values (100 sampai 900) atau dengan menggunakan descriptive terms (normal, bold, bolder, dan lighter). 
+
+************FONT-STYLE***************
+**************************************
+**************************************
+(normal) atau miring (italic dan oblique)
+
+
+************FONT-VARIANT***************
+**************************************
+**************************************
+Kita yang terbiasa dengan aplikasi document editor (rich text) seperti Microsoft Word, tentu tahu atau sudah mencoba fitur small caps. Fitur ini dapat membuat teks menjadi kapital tetapi dituliskan secara kecil dan merapat, seperti ini:
+
+
+************SHORT HAND***************
+**************************************
+**************************************
+
+target{
+  font:style weight variant size font-family
+}
+
+contoh 
+p{
+  font :1em sans-serif
+}
+
+
+*/
+
+/* 
+
+***************Line Height**********************
+Properti line-height digunakan untuk mengatur jarak minimal dari garis dasar ke garis dasar dalam menampilkannya teks pada halaman. Jika kita terbiasa dengan software document editor (rich text) seperti Microsoft Word, properti ini mirip dengan fungsi line and paragraph spacing.
+
+p {
+   line-height: 2;
+}
+p {
+   line-height: 200%;
+}
+p {
+   line-height: 2em;
+}
+
+
+
+***************Text Indent**********************
+Dalam membuat sebuah dokumen tidak jarang kita membutuhkan jarak/lekuk di awal paragraf. Hal tersebut dapat dilakukan pada website dengan menerapkan properti text-indent.  Kita dapat menentukan nilai properti ini melalui perhitungan panjang dalam px, em, dan in atau bisa menggunakan nilai persentase (%). Nilai persentase dihitung berdasarkan lebar dari induk elemen. Berikut merupakan contoh penggunaannya:
+p#first {
+   text-indent: 2em;
+}
+ 
+p#second {
+   text-indent: 25%;
+}
+ 
+p#third {
+   text-indent: -35px;
+}
+
+
+***************Text Align**********************
+Kita bisa mengatur text alignment (perataan teks) pada website seperti kita melakukannya pada aplikasi Microsoft Word dengan menggunakan properti text-align. Untuk asalnya, properti ini bernilai left atau biasa kita sebut rata kiri. Namun jika kita ingin mengubah perataan teks ini berada di posisi lainnya, maka kita dapat mengubah value-nya menjadi value yang sesuai dengan keinginan kita.
+
+Berikut ini nilai yang dapat digunakan pada properti text-align:
+text-align: left
+Membuat perataan teks pada ujung kiri
+
+text-align: right
+Membuat perataan teks pada ujung kanan
+
+text-align: center
+Membuat perataan teks secara menengah
+
+text-align: justify
+Membuat perataan teks yang setara pada ujung kiri dan kanannya
+
+
+
+
+***************Text Decoration**********************
+Properti ini paling populer digunakan ketika kita ingin membuat garis bawah atau underline pada teks. Tapi tak hanya itu, ada beberapa nilai lain yang dapat kita gunakan untuk properti ini. Detailnya sebagai berikut:
+text-decoration: underline
+Memberikan garis bawah (underline) pada teks
+
+text-decoration: overline
+Memberikan garis atas (overline) pada teks
+
+text-decoration: line-through
+Memberikan efek tulisan dicoret (strikethrough)
+
+text-decoration: none
+Menghilangkan dekorasi teks yang ada pada elemen
+
+***************Text Transform**********************
+Pasti kita pernah mencoba fitur pada document editor yang dapat mengubah kapitalisasi pada teks, bukan? Fitur ini sangat membantu di kala kita ingin mengubah kapitalisasi tanpa harus menuliskan kembali teksnya. Pada CSS juga terdapat fitur serupa, yaitu dengan menggunakan properti text-transform. Ketika kita menerapkan properti text-transform pada elemen teks, maka kapitalisasi akan berubah ketika halaman di-render tanpa harus mengubahnya pada dokumen HTML. 
+
+Properti ini dapat berisikan nilai sebagai berikut:
+text-transform: none
+Teks yang ditampilkan sama seperti yang dituliskan
+
+text-transform: capitalize
+Membuat huruf pertama besar pada tiap katanya
+
+text-transform: lowercase
+Membuat seluruh teks menggunakan huruf kecil
+
+Text-transform: uppercase
+Membuat seluruh teks menggunakan huruf besar
+
+
+
+***************Text Transform**********************
+roperti selanjutnya yang bisa kita gunakan untuk formating teks adalah letter-spacing dan word-spacing. Seperti namanya, properti ini digunakan untuk mengatur spasi atau jarak pada teks. Properti letter-spacing digunakan untuk mengatur jarak antar huruf, sedangkan word-spacing digunakan untuk mengatur jarak antar kata. Berikut contohnya:
+
+p#letter {
+   letter-spacing: 4px;
+}
+p#word {
+   word-spacing: 1.5em;
+}
+
+***************Text shadow**********************
+Memberikan bayangan pada teks telah menjadi hal yang umum digunakan meskipun tidak memiliki dukungan di semua browser. Pada CSS untuk membuat bayangan pada teks (atau biasa disebut drop shadow) kita dapat gunakan properti text-shadow.
+
+Nilai dari properti ini cukup rumit karena membutuhkan tiga buah nilai dan satu buah nilai warna sehingga membutuhkan empat nilai dalam satu properti untuk menentukan bayangannya.
+
+Nilai pertama : menunjukkan seberapa jauh ke kiri atau kanan (horizontal) bayangan harus ditampakkan.
+Nilai kedua : menunjukkan jarak ke atas atau ke bawah (vertical) bayangan harus ditampakkan. 
+Nilai Ketiga (opsional) : menentukan tingkat keburaman yang harus diterapkan pada bayangan.
+Nilai Keempat :  menentukan warna yang digunakan pada bayangan.
+
+p#one {
+   text-shadow: 1px 1px 0px #000000;
+   background-color: #eeeeee;
+   color: #666666;
+}
+
+*/
+
+
+
+/* 
+
+
+***************Menetapkan Nilai Warna*******************
+********************************************************
+********************************************************
+
+
+<<<<<<<<<<<<Numeric Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Warna hijau menggunakan format RGB 
+color: rgb(78,231,23);
+ 
+Warna hijau Menggunakan format HEX 
+color: #4ee717;
+ 
+Warna hijau menggunakan format HSL (hanya di CSS3)
+color: hsl(104, 82%, 50%);
+                              
+<<<<<<<<<<<<<<<<<Predefined Color Name>>>>>>>>>>>>>>>>>>>>
+color: black;
+color: white;
+color: blue;
+
+<<<<<<<<<<<<<<<<<Opactiy >>>>>>>>>>>>>>>>>>>>
+div#opacity {
+   background-color: red;
+   opacity: 0.5;
+}
+
+
+
+
+/* 
+*******************BAKCKGROUND COLOR********************
+CSS memperlakukan setiap elemen HTML seperti berada pada sebuah kotak (kita akan mempelajari ini pada pembahasan box model). Properti background-color dapat mengatur warna latar belakang dari kotak tersebut
+
+
+
+
+
+
+
+**********************BOX MODEL***************************
+Pada pembahasan background-color disinggung bahwa setiap elemen ditampilkan seperti sebuah boxes atau kotak. Box model merupakan salah satu konsep dari CSS. Setiap elemen yang dibuat pada HTML akan menciptakan sebuah kotak untuk menampung kontennya.  Layaknya bentuk kotak pada umumnya, pasti terdapat nilai seperti width (lebar), height (tinggi), padding (tebal lapisan), border (garis tepi), dan juga jarak. Pada CSS nilai - nilai tersebut dapat kita atur.
+
+
+Content : Merupakan sebuah inti dari kotak elemen yang merupakan konten dari elemen itu sendiri
+Padding : Area yang menjadi jarak antara border elemen dengan konten yang ditampilkan. Ketika kita menerapkan background-color maka warna tersebut diterapkan pada area padding. Penerapan ukuran padding pada elemen merupakan opsional.
+Border : Merupakan garis terluar yang mengelilingi konten dan padding. Penerapan border pada elemen merupakan opsional.
+Margin : Berbeda dengan padding, margin merupakan area jarak diluar dari border. Pada ilustrasi diatas, margin ditunjukkan dengan warna merah muda namun pada aslinya margin selalu transparan dan penerapan margin pada elemen merupakan opsional.
+Edge of element : merupakan batas dari suatu elemen. Di dalamnya terdapat margin, border, padding dan konten. Pada ilustrasi di atas, batas elemen ditunjukkan dengan garis putus tetapi pada aslinya batas elemen selalu tidak terlihat.
+
+
+Box Dimensions
+Secara standar sebuah box yang dihasilkan tiap elemen selalu cukup untuk menampung konten. Tetapi kita dapat mengatur nilai dimensi dari box tersebut dengan properti width dan height.
+
+Limiting Dimension
+Beberapa website yang ada sekarang menampilkan layout yang dapat melebar dan menyempit mengikuti ukuran layar pengguna. Pada prinsip tampilan tersebut mungkin kita memerlukan sebuah limitasi ukuran yang harus ditampilkan agar konten selalu dapat ditampilkan secara proporsional. Untuk melakukannya kita manfaatkan properti min-width dan max-width.
+min-width : merupakan properti yang digunakan untuk menetapkan nilai lebar minimal yang harus dimiliki elemen.
+max-width : merupakan properti yang digunakan untuk menetapkan nilai lebar maksimal yang harus dimiliki elemen.
+
+
+Overflowing Content
+visible : Merupakan nilai default pada properti ini. Konten yang tidak tertampung (overflow) akan tetap ditampilkan seperti pada standarnya.
+hidden : Jika terjadi overflow, maka konten yang tidak tertampung akan disembunyikan.
+scroll : Memunculkan scroll bar pada pinggir elemen, sehingga konten yang tidak tertampung akan ditampilkan dengan scroll bar. Jika menggunakan nilai ini, scroll bar akan tetap muncul walaupun konten tidak terjadi overflow.
+auto : Sama seperti scroll, bedanya jika tidak terjadi overflow, maka nilai visible yang akan diterapkan.
+
+
+Box-sizing
+Pada CSS2 ukuran lebar dan panjang elemen mengacu pada konten elemen (content-box). Itu berarti ukuran elemen seluruhnya merupakan nilai panjang dan lebar yang kita spesifikasikan ditambah dengan nilai padding dan border yang diterapkan pada elemen. Hal tersebut membuat sebagian developer menjadi sulit menetapkan ukuran dimensi.
+
+Border
+Border merupakan sebuah garis yang mengelilingi area konten dan padding (opsional). Kita bisa mengatur tipe, ketebalan, serta warna garis yang ditampilkan sesuai dengan yang kita inginkan. Kita juga bisa mengatur dalam menampilkan sebagian atau keseluruhan garis pada elemen. Mari kita eksplorasi apa saja properties yang dapat mengatur border.
+
+
+Border Width
+Properti border-width digunakan untuk mengatur ketebalan dari border. Nilai dari properti ini dapat berupa pixel atau menggunakan predefined names value seperti thin, medium, dan thick. Kita tidak bisa menggunakan nilai persentase (%) pada properti ini.
+.box {
+  border-width: 2px 1px 1px 2px; ****top right bottom left*****
+}
+
+Border Style
+Kita bisa menetapkan tipe border dengan menggunakan properti border-style
+
+Border Color
+Properti terakhir adalah border-color. Properti ini digunakan untuk menentukan warna pada garis dengan menggunakan nilai RGB, Hex, atau nama warna pada CSS
+
+
+Shorthand
+Untuk menerapkan border pada elemen kita harus mendefinisikan seluruh properti border yang ada. Dimulai dari menetapkan ketebalan (border-width), tipe (border-style), dan warna (border-color). Jika kita lupa menetapkan salah satu properti tersebut, maka garis tidak akan nampak pada elemen.
+
+
+
+
+
+************************************************************************
+**************************PADDING**************************************
+***********************************************************************
+Padding
+Padding merupakan jarak antara area konten dan border. Padding banyak diterapkan pada elemen jika elemen tersebut menerapkan warna latar atau pun border. Padding memberikan sedikit ruang sehingga konten di dalam elemen dapat lebih nyaman untuk ditampilkan
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 10px;
+padding-left: 15px;
+
+padding: 10px 15px 10px 15px;
+
+
+************************************************************************
+**************************MARGIN***********************************
+***********************************************************************
+Seperti halnya padding, margin merupakan ruang atau jarak pada sebuah elemen. Namun jarak tersebut terletak di luar dari konten dan border elemen. Margin digunakan untuk menjaga elemen agar tidak bertabrakan satu sama lain atau dari tepi jendela browser.
+
+margin-top: 10px;
+margin-right: 15px;
+margin-bottom: 20px;
+margin-left: 25px;
+
+margin: 10px 15px 20px 25px
+
+margin: 10px 15px; ****** top dan bottom bernilai 10px, left dan right bernilai 15px ******
+
+
+
+************************************************************************
+**************************DISPLAY ROLE*********************************
+***********************************************************************
+
+
+inline element:
+Elemen HTML yang secara default tidak menambahkan baris baru ketika dibuat.
+Nilai lebar dan tinggi elemen inline sebesar konten di dalamnya, dan tidak dapat diubah.
+Margin dan padding hanya mempengaruhi elemen secara horizontal, tidak vertikal.
+
+block element:
+Elemen HTML secara default menambahkan baris baru ketika dibuat.
+Jika tidak diatur lebarnya, lebar dari elemen block akan memenuhi lebar dari browser atau elemen yang menaunginya.
+Kita dapat mengatur dimensi dari elemen block.
+Di dalam elemen block, kita dapat menyimpan tag elemen HTML lainnya
+
+
+Dengan menggunakan properti display, kita dapat mengubah sebuah elemen inline menjadi block, begitupun sebaliknya. Dalam hal ini, properti ini juga dapat digunakan untuk menyembunyikan elemen yang ditampilkan.
+
+Nilai dari properti ini dapat berupa:
+
+inline : digunakan untuk mengubah elemen block berperilaku seperti elemen inline.
+block : digunakan untuk mengubah elemen inline berperilaku seperti elemen block.
+inline-block : membuat elemen block tidak menambahkan baris baru ketika dibuat, namun tetap mempertahankan sifat lain dari elemen block.
+none : digunakan untuk menyembunyikan elemen dari halaman.
+
+
+************************************************************************
+**************************bOX SHADOW*********************************
+***********************************************************************
+Pada materi formatting text kita sudah belajar cara menambahkan drop shadow pada teks. Pada CSS3 kita juga dapat menambahkan drop shadow di sekitar kotak elemen (tidak termasuk margin) dengan menggunakan properti box-shadow.
+
+
+box-shadow: 6px 6px 5px 10px #666666;
+Nilai pertama : menunjukkan seberapa jauh ke kiri atau kanan (horizontal) bayangan harus ditampakkan.
+Nilai kedua : menunjukkan jarak ke atas atau ke bawah (vertical) bayangan harus ditampakkan. 
+Nilai Ketiga (opsional) : menentukan tingkat keburaman yang harus diterapkan pada bayangan.
+Nilai Keempat (opsional) : menentukan tingkat sebaran (spread) bayangan. Semakin besar nilai yang ditentukan, bayangan yang nampak pun semakin luas.
+Nilai Kelima : menentukan warna yang digunakan pada bayangan.
+
+
+
+
+
+************************************************************************
+**************************ROUNDED CORNER*********************************
+***********************************************************************
+CSS3 memperkenalkan kemampuan untuk membuat rounded corner atau sudut bundar pada box dengan menggunakan properti border-radius. Nilai dari properti ini merupakan tingkat lengkungan border dalam pixel.
+.rounded {
+   border-radius: 10px;
+}
+rounded {
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 5px;
+   border-top-left-radius: 10px;
+}
+.rounded {
+   border-radius: 10px 5px 10px 5px;
+}
+
+
+
+Positioning
+Kita sudah mengetahui cara mengubah posisi dari sebuah elemen dengan menggunakan margin. Namun ketika melakukannya, posisi elemen lain di sekitarnya akan terpengaruh. Lantas bagaimana jika kita ingin memindahkan tanpa mengganggu posisi elemen lainnya? Solusinya kita perlu mengubah positioning schema dengan menggunakan properti position dalam mengontrol letak elemen tersebut. Berikut nilai dari properti position yang ada pada CSS:
+
+Normal Flow / Static Flow : Merupakan default behaviour yang dimiliki elemen, di mana setiap elemen block akan ditampilkan dalam baris baru ketika dibuat. Sehingga setiap elemen block selalu muncul di bawah dari elemen block sebelumnya. Bahkan jika masih terdapat ruang kosong pada samping elemennya, mereka tidak akan nampak bersebelahan.
+
+Relative Positioning : Membuat elemen bisa berpindah posisi ke atas, kanan, bawah, maupun kiri dari posisi semula atau posisi seharusnya elemen tersebut berada. Perpindahan posisi ini tidak akan berpengaruh terhadap posisi elemen di sekitarnya karena ketika menggunakan relative positioning, elemen tersebut akan dipindahkan dari normal flow.
+
+Absolute Positioning : Sama seperti relative, elemen akan dipindahkan keluar dari normal flow sehingga kita dapat memindahkan posisi elemen ke atas, kanan, bawah, maupun kiri secara leluasa tanpa mengganggu elemen di sekitarnya. Namun posisinya relatif pada jendela browser dan induk elemen selama induk elemen juga berada di luar dari normal flow.
+
+Fixed Positioning : Merupakan absolute position namun posisinya selalu relatif pada jendela browser. Bahkan ketika pengguna scrolling pun, posisinya di layar akan tetap tak berubah
+
+*/
+
+
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
